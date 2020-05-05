@@ -1,0 +1,11 @@
+
+.chat-frame {
+    width: calc(100% - 20px);
+    height: calc(100% - 23px);
+    padding: 10px;
+    border: none;
+}
+
+.chat-hidden {
+    display: none;
+}

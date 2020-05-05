@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "eterna-chat": "github:aminere/eterna-chat"
+    "eterna-chat": "file:.."
   },
   "devDependencies": {
     "ts-loader": "^7.0.2",
