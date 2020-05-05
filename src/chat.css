@@ -9,3 +9,11 @@
 .chat-hidden {
     display: none;
 }
+
+.chat-tabs-container {
+    height: calc(100% - 20px);
+}
+
+.chat-tab-content {
+    height: 100%;
+}
