@@ -1,4 +1,8 @@
-Example integration:
+Install the chat library using:
+
+`npm install --save aminere/eterna-chat`
+
+Example usage:
 
 ```
 import { createChat } from "eterna-chat";
