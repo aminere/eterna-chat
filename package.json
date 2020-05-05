@@ -1,0 +1,23 @@
+{
+  "name": "eterna-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aminere/eterna-chat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aminere/eterna-chat/issues"
+  },
+  "homepage": "https://github.com/aminere/eterna-chat#readme",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
