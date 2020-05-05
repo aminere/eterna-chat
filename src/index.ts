@@ -11,45 +11,66 @@ export function createChat(container: HTMLElement, username: string, uid: string
     ];
 
     const selectors = document.createElement('div');
+    selectors.className = "chat-selectors";
     const contents = document.createElement('div');
-    contents.className = "chat-tabs-container";
+    contents.className = "chat-contents";
 
     const createFrame = (channel: string) => {
         const frame = document.createElement('iframe');
         frame.className = "chat-frame";        
         frame.src = `https://irc.eternagame.org/chat.html?name=${encodeURIComponent(username)}&uid=${uid}&channel=${channel}`;
+        // frame.src = `chat.html?name=${encodeURIComponent(username)}&uid=${uid}&channel=${channel}`;
         return frame;
     };
 
     const createTab = (channel: string, index: number) => {
         const tab = document.createElement('div');
-        tab.classList.add('chat-tab-content');
-        if (index === 0) {
-            tab.classList.add('chat-hidden');
+        tab.classList.add('chat-content');
+        if (index > 0) {
+            tab.classList.add('hidden');
         }
         tab.appendChild(createFrame(channel));
         return tab;
     };
 
     const createSelector = (channel: string, index: number) => {
-        const button = document.createElement('button');
-        button.classList.add('chat-tab-selector');
+        const selector = document.createElement('div');
+        selector.className = 'chat-selector';
         if (index === 0) {
-            button.classList.add('chat-tab-active');
+            selector.style.marginLeft = "0px";
         }
-        button.onclick = () => {
-            for (let i = 0; i < contents.children.length; ++i) {
-                if (i === index) {
-                    contents.children[i].classList.remove('chat-hidden');
-                    selectors.children[i].classList.add('chat-tab-active');
-                } else {
-                    contents.children[i].classList.add('chat-hidden');
-                    selectors.children[i].classList.remove('chat-tab-active');
-                }
+        selector.appendChild((() => {
+            const button = document.createElement('button');
+            button.classList.add('chat-selector-button');
+            if (index === 0) {
+                button.classList.add('active');
             }
-        };
-        button.innerText = channel;
-        return button
+            button.onclick = () => {
+                for (let i = 0; i < contents.children.length; ++i) {
+                    const [ button, arrow ] = selectors.children[i].children;
+                    if (i === index) {
+                        contents.children[i].classList.remove('hidden');                        
+                        button.classList.add('active');
+                        arrow.classList.remove('hidden');
+                    } else {
+                        contents.children[i].classList.add('hidden');
+                        button.classList.remove('active');
+                        arrow.classList.add('hidden');
+                    }
+                }
+            };
+            button.innerText = channel;
+            return button;
+        })());
+        selector.appendChild((() => {
+            const arrow = document.createElement('img');
+            arrow.src = 'assets/tab-arrow.svg';
+            if (index > 0) {
+                arrow.classList.add('hidden');
+            }
+            return arrow;
+        })());
+        return selector;     
     };
 
     channels.forEach((channel, index) => {
