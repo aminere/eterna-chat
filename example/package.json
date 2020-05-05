@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "eterna-chat": "file:.."
+    "eterna-chat": "github:aminere/eterna-chat"
   },
   "devDependencies": {
     "ts-loader": "^7.0.2",
