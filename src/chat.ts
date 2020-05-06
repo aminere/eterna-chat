@@ -96,6 +96,7 @@ export class Chat {
             contents.appendChild(createTab(channel, index));
         });
         props.container.innerHTML = "";
+        props.container.classList.add('chat-container');
         props.container.appendChild(selectors);
         props.container.appendChild(contents);
 
