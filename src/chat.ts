@@ -97,6 +97,7 @@ export class Chat {
         });
         props.container.innerHTML = "";
         props.container.classList.add('chat-container');
+        props.container.classList.remove('hidden');
         props.container.appendChild(selectors);
         props.container.appendChild(contents);
 
