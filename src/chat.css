@@ -15,6 +15,7 @@
     display: flex;
     border-bottom: 1px solid #70707080;
     margin-left: 15px;
+    position: relative;
 }
 
 .chat-selector {
@@ -32,6 +33,11 @@
     font: Bold 11px/15px Open Sans;
     text-transform: uppercase;
     letter-spacing: 0.11px;
+    transition: opacity .2s;
+}
+
+.chat-selector-button:hover {
+    opacity: 1;
 }
 
 .chat-selector-button.active {
@@ -48,4 +54,15 @@
 
 .chat-content {
     height: 100%;
+}
+
+.chat-close {
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    transition: filter .2s;
+}
+
+.chat-close:hover {
+    filter: grayscale(1)
 }

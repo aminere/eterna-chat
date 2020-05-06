@@ -1,7 +1,7 @@
 
 import "./chat.css";
 
-export function createChat(container: HTMLElement, username: string, uid: string) {
+export function createChat(container: HTMLElement, username: string, uid: string, onClose: () => void) {
 
     // TODO define channels
     const channels = [
@@ -79,4 +79,13 @@ export function createChat(container: HTMLElement, username: string, uid: string
     });
     container.appendChild(selectors);
     container.appendChild(contents);
+
+    // close button
+    selectors.appendChild((() => {
+        const close = document.createElement('img');
+        close.className = "chat-close";
+        close.src = "assets/close-button.svg";
+        close.onclick = onClose;
+        return close;
+    })());
 }
