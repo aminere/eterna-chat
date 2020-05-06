@@ -18,3 +18,5 @@ const chat = new Chat({
 ```
 
 See the `example` folder.
+
+![image](https://user-images.githubusercontent.com/11358110/81236451-4101ee00-8fcb-11ea-873d-7369932a9d4a.png)
