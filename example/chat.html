@@ -14,23 +14,16 @@
 <body style="height: 100%; margin: 0px; padding: 0px; font-family: 'Helvetica Neue', 'Open Sans', Arial, Gulim; font-size: 14px; font-weight: 300;">
     <div id="chat" style="height: 100%; font-family: 'Helvetica Neue', 'Open Sans', Arial, Gulim; font-size: 14px; font-weight: 300;">        
         <div id="chat-content" style="position: relative;">
-            <div id="chat-tabs" style="height: calc(100% - 50px); display:none; ">
+            <div id="chat-tabs" style="height: calc(100% - 50px);">
                 <div id="chat-tab-global" style="word-wrap: break-word; white-space: normal;">
                     <ul id="global-chat-messages"></ul>
-                    <ul>
-                        <li class="chat-message" id="chat-loading" style="color:white">
-                            <img src="https://s3.amazonaws.com/eterna/icon_img/loading.gif" style="margin-bottom: 5px; background-repeat: no-repeat; width: 20px; height: 20px; margin-left: auto; margin-right: auto;"></img>
-                            <span id="connecting">Connecting...</span>
-                            <span id="failed" style="display:none;">Connection failed. retrying in <span id="timer">0</span> seconds.</span>
-                        </li>
-                    </ul>
                 </div>
 
                 <div id="chat-tab-users" style="display: none;">
                     <ul id="chat-users-list"></ul>
                 </div>
             </div>
-            <div id="chat-loading" style="position: relative; top: Calc(50% - 55px); color: #FFF; text-align: center;">
+            <div id="chat-loading" style="position: absolute; left: calc(50% - 55px); top: calc(50% - 55px); color: #FFF; text-align: center;">
                 <div style="margin-bottom: 5px; background-image: url('https://s3.amazonaws.com/eterna/icon_img/loading.gif'); background-repeat: no-repeat; width: 20px; height: 20px; margin-left: auto; margin-right: auto;"></div>
                 <span id="connecting">Connecting...</span>
                 <span id="failed" style="display:none;">Connection failed. retrying in <span id="timer">0</span> seconds.   </span>

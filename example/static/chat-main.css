@@ -212,7 +212,7 @@ textarea {
 
 .chat-input-container {
     position: relative;
-    width: Calc(100% - 28px);
+    width: calc(100% - 28px);
     margin: 10px;
     height: 35px;
 }
