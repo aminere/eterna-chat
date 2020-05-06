@@ -9,6 +9,24 @@
 <link href="static/chat-vendor.css" rel="stylesheet"><link href="static/chat-main.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="eterna.css">
 
+<script type="text/javascript">
+    function changeTab(tab) {
+        if (tab === 'users') {
+            document.getElementById('chat-users-btn').classList.add('hidden');
+            document.getElementById('chat-tab-btn').classList.remove('hidden');
+            document.getElementById('chat-tab-global').classList.add('hidden');
+            document.getElementById('chat-tab-users').classList.remove('hidden');
+        } else if (tab === 'chat') {
+            document.getElementById('chat-users-btn').classList.remove('hidden');
+            document.getElementById('chat-tab-btn').classList.add('hidden');
+            document.getElementById('chat-tab-global').classList.remove('hidden');
+            document.getElementById('chat-tab-users').classList.add('hidden');
+        } else {
+            console.warn(`Unknown tab ${tab}`);
+        }
+    }
+</script>
+
 </head>
 
 <body style="height: 100%; margin: 0px; padding: 0px; font-family: 'Helvetica Neue', 'Open Sans', Arial, Gulim; font-size: 14px; font-weight: 300;">
@@ -19,7 +37,7 @@
                     <ul id="global-chat-messages"></ul>
                 </div>
 
-                <div id="chat-tab-users" style="display: none;">
+                <div id="chat-tab-users" class="hidden">
                     <ul id="chat-users-list"></ul>
                 </div>
             </div>
@@ -29,9 +47,13 @@
                 <span id="failed" style="display:none;">Connection failed. retrying in <span id="timer">0</span> seconds.   </span>
             </div>
 
-            <div class="chat-input-container">
-                <textarea id="chat-input" disabled></textarea>
-                <img class="chat-input-img" src="static/submit-button.svg" />
+            <div class="chat-input-group">
+                <div class="chat-input-container">                
+                    <textarea id="chat-input" disabled></textarea>
+                    <img class="chat-input-img" src="static/submit-button.svg" />
+                </div>
+                <img id="chat-users-btn" class="chat-input-button" src="static/chat-users.svg" onclick="changeTab('users')" />
+                <img id="chat-tab-btn" class="chat-input-button hidden" src="static/chat-bubble.svg" onclick="changeTab('chat')" />
             </div>            
 
             <div id="reconnect" class="unselectable clickable green-button-interactive rounded-5 centered" style="display:none; color:white; font-weight:bolder; font-size:13px;"><div class="green-button-bg rounded-5"></div>Reconnect</div>

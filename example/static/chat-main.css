@@ -212,9 +212,23 @@ textarea {
 
 .chat-input-container {
     position: relative;
-    width: calc(100% - 28px);
+    width: calc(100% - 60px);
     margin: 10px;
     height: 35px;
+}
+
+.chat-input-group {
+    display: flex;
+}
+
+.chat-input-button {
+    margin-left: 10px;
+    cursor: pointer;
+    transition: filter .3s;
+}
+
+.chat-input-button:hover {
+    filter: grayscale(1);
 }
 
 .chat-input-img {
@@ -394,4 +408,8 @@ textarea {
     width: Calc(100% - 28px);
     min-height: 19px;
     border: 1px;
+}
+
+.hidden {
+    display: none;
 }
