@@ -17,9 +17,9 @@ export class Chat {
 
         // TODO define channels
         const channels = [
-            'basics',
-            'ribosome',
-            'lab'
+            'general',
+            'help',
+            'labs'
         ];
 
         const selectors = document.createElement('div');
