@@ -8,5 +8,6 @@ export declare class Chat {
     private _props;
     constructor(props: IChatProps);
     show(): void;
+    hide(): void;
 }
 export {};

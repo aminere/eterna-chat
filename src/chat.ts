@@ -26,8 +26,8 @@ export class Chat {
         contents.className = "chat-contents";
 
         const createFrame = (channel: string) => {
-            const url = 'https://irc.eternagame.org/chat.html';
-            // const url = 'chat.html';
+            // const url = 'https://irc.eternagame.org/chat.html';
+            const url = 'chat.html';
             const params = `?name=${encodeURIComponent(props.username)}&uid=${props.uid}&channel=${channel}`;
             const frame = document.createElement('iframe');
             frame.className = "chat-frame";
@@ -110,5 +110,9 @@ export class Chat {
 
     public show() {
         this._props.container.classList.remove('hidden');
+    }
+
+    public hide() {
+        this._props.container.classList.add('hidden');
     }
 }
