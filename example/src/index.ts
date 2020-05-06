@@ -1,6 +1,11 @@
 
-import { createChat } from "eterna-chat";
+import { Chat } from "eterna-chat";
 
-createChat(document.getElementById('chat-container'), "Anonymous", "000", () => {
-    console.log("close clicked");
+new Chat({
+    container: document.getElementById('chat-container'),
+    username: 'Anonymous',
+    uid: '000000',
+    onHidden: () => {
+        console.log('Chat.onHidden()')
+    }
 });
