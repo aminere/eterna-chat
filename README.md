@@ -1,8 +1,10 @@
-*Install the chat library*
+Temporary wrapper for Eterna's legacy IRC chat client to support easy installation and multiple channels
 
-`npm install --save aminere/eterna-chat`
+## Install the chat library
 
-*Example usage*
+`npm install --save eternagame/eterna-chat-wrapper`
+
+## Example usage
 
 ```
 import { Chat } from "eterna-chat";
