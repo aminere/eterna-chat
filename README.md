@@ -15,6 +15,12 @@ const chat = new Chat({
         console.log('Chat.onHidden()')
     }
 });
+
+// Hide the chat without destroying it
+chat.hide();
+
+// Show an existing chat again
+chat.show();
 ```
 
 See the `example` folder.
