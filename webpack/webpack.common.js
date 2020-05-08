@@ -1,13 +1,11 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'development',
   entry: './src/index.ts',
   output: {
-    path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
     libraryTarget: 'umd',
-    library: 'eterna-chat'    
+    library: 'EternaChat'    
   },
   resolve: {
     extensions: ['.ts']
@@ -18,7 +16,7 @@ module.exports = {
         test: /\.tsx?$/,
         loader: 'ts-loader',
         include: [
-          path.resolve(__dirname, 'src')
+          path.resolve(__dirname, '../src')
         ]
       },
       {

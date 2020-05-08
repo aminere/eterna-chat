@@ -1,29 +1,28 @@
 {
-  "name": "eterna-chat",
+  "name": "eterna-chat-wrapper",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
+  "description": "Temporary wrapper for Eterna's legacy IRC chat client to support easy installation and multiple channels",
+  "main": "dist/index.min.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "webpack",
-    "watch": "webpack --watch"
+    "build:dev": "webpack --config=webpack/webpack.dev.js",
+    "build:prod": "webpack --config=webpack/webpack.prod.js",
+    "watch": "webpack --config=webpack/webpack.dev.js --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aminere/eterna-chat.git"
+    "url": "git+https://github.com/eternagame/eterna-chat-wrapper.git"
   },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/aminere/eterna-chat/issues"
-  },
-  "homepage": "https://github.com/aminere/eterna-chat#readme",
+  "license": "ISC",  
+  "homepage": "https://github.com/eternagame/eterna-chat-wrapper#readme",
   "devDependencies": {
     "css-loader": "^3.5.3",
     "style-loader": "^1.2.1",
     "ts-loader": "^7.0.2",
     "typescript": "^3.8.3",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2"
   }
 }
