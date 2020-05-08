@@ -1,5 +1,5 @@
 
-import { Chat } from "eterna-chat";
+import { Chat } from "eterna-chat-wrapper";
 
 new Chat({
     container: document.getElementById('chat-container'),
