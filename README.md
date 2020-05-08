@@ -7,7 +7,7 @@ Temporary wrapper for Eterna's legacy IRC chat client to support easy installati
 ## Example usage
 
 ```
-import { Chat } from "eterna-chat";
+import { Chat } from "eterna-chat-wrapper";
 
 const chat = new Chat({
     container: document.getElementById('chat-container'),
