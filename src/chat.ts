@@ -76,6 +76,7 @@ export class Chat {
                             arrow.classList.add('hidden');
                         }
                     }
+                    this._iframes[this._currentTab].contentWindow.postMessage({type: 'chat-scroll'}, '*');
                 };
                 button.innerText = channel;
                 return button;
