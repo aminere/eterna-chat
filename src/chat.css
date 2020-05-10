@@ -84,6 +84,7 @@
 .chat-collapse-icon {
     transform: rotate(180deg) scale(1.2);
     filter: invert();
+    cursor: pointer;
     position: absolute;
     right: 4px;
     top: 50%;
