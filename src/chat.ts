@@ -3,6 +3,7 @@ interface IChatProps {
     container: HTMLElement;
     username: string;
     uid: string;
+    backgroundColor?: string;
     onHidden?: () => void;
 }
 
@@ -98,6 +99,9 @@ export class Chat {
         });
         props.container.innerHTML = "";
         props.container.classList.add('chat-container');
+        if (props.backgroundColor) {
+            props.container.style.backgroundColor = props.backgroundColor;
+        }
         props.container.classList.remove('hidden');
         props.container.appendChild(selectors);
         props.container.appendChild(contents);

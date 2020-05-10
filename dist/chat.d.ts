@@ -2,6 +2,7 @@ interface IChatProps {
     container: HTMLElement;
     username: string;
     uid: string;
+    backgroundColor?: string;
     onHidden?: () => void;
 }
 export declare class Chat {
