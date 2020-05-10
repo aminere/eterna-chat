@@ -35,7 +35,10 @@ export class Chat {
         const createFrame = (channel: string) => {
             const url = 'https://irc.eternagame.org/multi-chat/chat.html';
             // const url = 'chat.html';
-            const params = `?name=${encodeURIComponent(props.username)}&uid=${props.uid}&channel=${channel}`;
+            let params = `?channel=${channel}`;
+            if (props.username && props.uid) {
+                params = `${params}&name=${encodeURIComponent(props.username)}&uid=${props.uid}`;
+            }
             const frame = document.createElement('iframe');
             frame.className = "chat-frame";
             frame.src = `${url}${params}`;
