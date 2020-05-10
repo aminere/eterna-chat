@@ -122,6 +122,7 @@ export class Chat {
                         collapse.classList.remove('collapsed');
                         contents.classList.remove('hidden');
                         props.container.classList.remove('collapsed');
+                        this._iframes[this._currentTab].contentWindow.postMessage({type: 'chat-scroll'}, '*');
                         if (props.onExpanded) {
                             props.onExpanded();
                         }
