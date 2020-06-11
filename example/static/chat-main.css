@@ -65,23 +65,11 @@
 #chat-tabs > .ui-tabs-panel {
     padding: .4em .5em;
     position: relative;
-    height: calc(100% - 50px);
+    height: Calc(100% - 55px);
 }
 #chat-tabs > .ui-tabs-panel ul {
     margin: 0px;
     padding: 0px;
-}
-
-#chat-tab-global {
-    height: 100%;
-}
-
-#chat-tab-users {
-    height: 100%;
-}
-
-#chat-content {
-    height: 100%;
 }
 
 /************* Minimization Triangle *************/
@@ -113,6 +101,7 @@ textarea {
     border: 1px solid rgb(169, 169, 169);
     width: calc(100% - 10px);
 }
+
 
 /************ Chat Messages ************/
 .chat-message {
@@ -225,6 +214,7 @@ textarea {
     margin-left: 10px;
     cursor: pointer;
     transition: filter .3s;
+    align-self: center;    
 }
 
 .chat-input-button:hover {
@@ -236,7 +226,22 @@ textarea {
     right: 0px;
     top: 50%;
     transform: translateY(-10px);
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9bS4tWHNpBxCFDdbIgWsRRq1CECqFWaNXB5NIvaGJIUlwcBdeCgx+LVQcXZ10dXAVB8APEydFJ0UVK/F9SaBHjwXE/3t173L0D/M0aU82ecUDVLCObTgn5wooQekUQYUTRh6TETH1WFDPwHF/38PH1LsGzvM/9OfqVoskAn0A8w3TDIl4nntq0dM77xDFWkRTic+Ixgy5I/Mh12eU3zmWH/TwzZuSyc8QxYqHcxXIXs4qhEieJ44qqUb4/77LCeYuzWquz9j35CyNFbXmJ6zSHkcYCFiFCgIw6qqjBQoJWjRQTWdpPefiHHL9ILplcVTByzGMDKiTHD/4Hv7s1S5MTblIkBQRfbPtjBAjtAq2GbX8f23brBAg8A1dax7/RBKY/SW90tPgRMLANXFx3NHkPuNwBBp90yZAcKUDTXyoB72f0TQUgegv0rrq9tfdx+gDkqKvMDXBwCIyWKXvN493h7t7+PdPu7wdXPHKc+KRDrwAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAN1wAADdcBQiibeAAAAAd0SU1FB+QFCBMMD24/Gx8AAAJVSURBVDjLnZU9TFNRFMd/5/leE4dW2oLFFAc/EkxqShEGEyZ0xbTEOBqcIFFclIAxUUocDODWaIIusDJIq7gZmUwcACmxJhjUgY9QWikfJiR9pddFjDavr+DZ7j3/+8u999zzv4JFBKIph+412wUJK+ECUPc7tSyKWSUqXsga8VQ0kC9dK6UTwVjyqghDwGlsQuCrEtWbvBV6aQm8Nj5+5Mt6/SBwl0OECE/mMsE+olIE0PYT/wMDUIqehprk4/2xtn/McrDch0kKO7kKVOkNxeYjABKIphxGdeGzgjOlut2lBZZHH+Lw1OK/3o/u8thhvxey+jlN95rtVjCAoyfr8bV1kt9Iszz6AHMzYwc8ZXj3whoiETuVq/EyviudmFs/WBnrx9xctzl5MawhNFW6eFfoEr62LsztDVZGo5i5dLmaN2soThykmq7GVmrbb1P4ucHK2ABmbs1K5tcO80Sc51twNrRibmdJJ55Z7bCoAasHBe58es9OcgrDVY0vfNPqFlc1UcwcBLb9cYq1iRi604O/ox/DXWvVNtOaEhWvCJt7R3pyBMPlwd8RxXD7rKuMSmi6UZgAtVgOtjX7lvTr5xjHvPg7BjCqjpeTftvL6K+0ma5mE6HPSrG7tMD6mxc4PD7qbjzCqKqxcR+5k4oG8n/cJvQ0OawUPVa97Ay0oDvdds08mOwO3fvHbeYywT4Fw6VS98U2e5iooWS24X5Zgw3F5iNKisMgZytYzKKg9cx1BxO2jg3QNDJt7OUdESXFMEjT318AqBklEjd0MzHT1WyWrv0FcuLUBjTx3O8AAAAASUVORK5CYII=);
+    width: 20px;
+    height: 20px;
 }
+
+#chat-users-btn {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9bS4tWHNpBxCFDdbIgWsRRq1CECqFWaNXB5NIvaGJIUlwcBdeCgx+LVQcXZ10dXAVB8APEydFJ0UVK/F9SaBHjwXE/3t173L0D/M0aU82ecUDVLCObTgn5wooQekUQYUTRh6TETH1WFDPwHF/38PH1LsGzvM/9OfqVoskAn0A8w3TDIl4nntq0dM77xDFWkRTic+Ixgy5I/Mh12eU3zmWH/TwzZuSyc8QxYqHcxXIXs4qhEieJ44qqUb4/77LCeYuzWquz9j35CyNFbXmJ6zSHkcYCFiFCgIw6qqjBQoJWjRQTWdpPefiHHL9ILplcVTByzGMDKiTHD/4Hv7s1S5MTblIkBQRfbPtjBAjtAq2GbX8f23brBAg8A1dax7/RBKY/SW90tPgRMLANXFx3NHkPuNwBBp90yZAcKUDTXyoB72f0TQUgegv0rrq9tfdx+gDkqKvMDXBwCIyWKXvN493h7t7+PdPu7wdXPHKc+KRDrwAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAN1wAADdcBQiibeAAAAAd0SU1FB+QFCBMMHOqBWsEAAAKDSURBVDjLpZXLaxNRFIe/M520oIiLVkR0JcYHITOpCdYiteBGN5qKtAv/ALtIRKjaoptmJbRVBBMXLfUPsIi2uHWrKDQlMyW21PcDBQ0ulWbSHBdOyMO2UntWwz3nfPf8zr1zrrCKhVL5ZrPVOytIXIXDwB7f9VmUORWdLhUC0/lUqNiYK40LVto5J8IosJd1TOCNoledZOTRqsDeqammpW8HRoDLbMRER53v9jVSUgYwKuv/BQNQGbTbnBt1FfoyH7AJE6Qnl7RmJJTKN5ttpYX1e6bPEFlB6VqH+Mo0vZBhtnpn62Cqt7VMJ+jEnxbJkJOMHHMS9nGFS76sSS3TKcLNah5BrxSIm4LEtbrPU+diZMAHv7DvupHgzsVbOd/pFqyM3eb25RLWBUQUeB7JOEcUjvuy44YK0eqB8bEqQRTkfZ2sYVSUjz4MgDK8q1EXM4Bd1QOj68C9xW0ABzMLraAnlr7tP1PxhzPzp1Q42X5nbgeANeZsFeiu2XK30dDaYsuv5SBAAC8EbFeks+I0hKPAthVpCgMYW8pB0FItwAC++t+fzIDX4SbtOYAm0dMqnHeT9mAl2ElawyqcEyEOkEu050rFQAfwwQ/5YoiS9QVPZvtjBYBw2g2rEnUT9l93003Yj0UItqfnYwD5gdAPhQmfMSt2JtcHch/4CSz7eS0CC4o+WePv6EawauKbga0q9Ep0fDZQ8syXIPvYnL0tFcxDRrY/5iEMbRKGIAP5VKhoADiJyMO6W7/xCTGSS1ozddMm990aUhjbeGk66hTs62sO2Eja7VEpj/27p/paMK5UKlsTCBAdnw2sFJt7VMpxkGjtEwCaVZHpgOnNZPtjXmPubxei71nNZ01YAAAAAElFTkSuQmCC);
+    height: 20px;
+    width: 20px;
+}  
+
+#chat-tab-btn {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9bi0VaHNpBRDBDdbIgKuKoVShChVArtOpgcukXNGlIUlwcBdeCgx+LVQcXZ10dXAVB8APEydFJ0UVK/F9SaBHjwXE/3t173L0D/M0qU82ecUDVLCOTSgq5/KrQ+4ogQogigmGJmfqcKKbhOb7u4ePrXYJneZ/7c0SUgskAn0A8y3TDIt4gnt60dM77xDFWlhTic+Ixgy5I/Mh12eU3ziWH/TwzZmQz88QxYqHUxXIXs7KhEk8RxxVVo3x/zmWF8xZntVpn7XvyF4YL2soy12kOIYVFLEGEABl1VFCFhQStGikmMrSf9PAPOn6RXDK5KmDkWEANKiTHD/4Hv7s1i5MTblI4CQRfbPtjBOjdBVoN2/4+tu3WCRB4Bq60jr/WBGY+SW90tPgR0L8NXFx3NHkPuNwBBp50yZAcKUDTXywC72f0TXkgegv0rbm9tfdx+gBkqav0DXBwCIyWKHvd492h7t7+PdPu7wcn+XKJ8Eo1kQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAN1wAADdcBQiibeAAAAAd0SU1FB+QFCBMNLNVDWywAAAGqSURBVDjL5ZK9a1MBFMV/5+XR1kEE0ZJGbZUmagmImwh+pcalIEhBNzsquOrg1yz+AYVOgoubWBDHJA9KHUUnqfSlVqU2r2koIolN8t67DlKoSMS0DoJ3vOeew7nnXhXng4eS3QRctl5fhSZciWsWuQd7+uqNrSq1Wr2nUHzDxczOH9mztA1XFBaCD4rpc/iL9e+K/XRBzzPXDgQFsG+54eSYJPP84LphdyEeH02nXhXfre5Tol2S6Vkuk7zT0VmUXNoFnAHlXywv7wCIRR4YNHTyByPKgg6bGPuts/zI/ppXDq4arF9MpRoAhnPPIXqjZuIxQC3dX9xbXrmF2ctf9izNV2rbzaqwEBwr+RXvv3kNSTOL1QGpsd5p6PTQ0FonbHauurNt0aBhTVfEj8LQPkFvohOh5Adrwp6E6rl/YXj3l41+0a9Mt4guAXXkTOhP7Hv+StoU38Y4lzDn8tlM/+uZxepAGEazq83ayJVstgWgbjIplYNxzKYkHoTE04nYeT6aSR7fwNVtyN77z0ctcp4KfTSz1Gaxrq+ZO5Saa9c5ERO/FUxuxr4DhQ2pEblFn+oAAAAASUVORK5CYII=);
+    height: 19px;
+    width: 19px;
+}  
 
 /************** Buttons ***************/
 
