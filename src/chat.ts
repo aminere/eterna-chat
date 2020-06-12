@@ -46,15 +46,18 @@ export class Chat {
         };
 
         this._currentTab = 0;
-        this._iframes = channels.map(createFrame);
+        this._iframes = new Array(channels.length);
 
         const createTab = (channel: string, index: number) => {
             const tab = document.createElement('div');
             tab.classList.add('chat-content');
             if (index > 0) {
                 tab.classList.add('hidden');
+            } else {
+                const chatFrame = createFrame(channel);
+                this._iframes[index] = chatFrame;
+                tab.appendChild(chatFrame);
             }
-            tab.appendChild(this._iframes[index]);
             return tab;
         };
 
@@ -74,12 +77,22 @@ export class Chat {
                     this._currentTab = index;
                     for (let i = 0; i < contents.children.length; ++i) {
                         const [button, arrow] = selectors.children[i].children;
+                        const tab = contents.children[i];
                         if (i === index) {
-                            contents.children[i].classList.remove('hidden');
+                            tab.classList.remove('hidden');
                             button.classList.add('active');
                             arrow.classList.remove('hidden');
+
+                            // create chat frame in current tab, if not already done
+                            if (!this._iframes[index]) {
+                                const chatFrame = createFrame(channels[index]);
+                                this._iframes[index] = chatFrame;
+                                console.assert(tab.childElementCount === 0);
+                                tab.appendChild(chatFrame);
+                            }                            
+
                         } else {
-                            contents.children[i].classList.add('hidden');
+                            tab.classList.add('hidden');
                             button.classList.remove('active');
                             arrow.classList.add('hidden');
                         }
