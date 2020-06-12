@@ -26,7 +26,6 @@ export class Chat {
             'help',
             'labs'
         ];
-
         const selectors = document.createElement('div');
         selectors.className = "chat-selectors";
         const contents = document.createElement('div');
@@ -51,7 +50,7 @@ export class Chat {
         const createTab = (channel: string, index: number) => {
             const tab = document.createElement('div');
             tab.classList.add('chat-content');
-            if (index > 0) {
+            if (index !== this._currentTab) {
                 tab.classList.add('hidden');
             } else {
                 const chatFrame = createFrame(channel);
@@ -70,7 +69,7 @@ export class Chat {
             selector.appendChild((() => {
                 const button = document.createElement('button');
                 button.classList.add('chat-selector-button');
-                if (index === 0) {
+                if (index === this._currentTab) {
                     button.classList.add('active');
                 }
                 button.onclick = () => {
@@ -106,7 +105,7 @@ export class Chat {
                 const arrow = document.createElement('img');
                 arrow.className = 'chat-selector-arrow';
                 arrow.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.621' height='6.222' viewBox='0 0 11.621 6.222'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%23404040;%7D%3C/style%3E%3C/defs%3E%3Cg transform='translate(11.621 6.222) rotate(180)'%3E%3Cpath class='a' d='M11.6.154A.252.252,0,0,0,11.368,0H.253A.253.253,0,0,0,.072.429L5.629,6.145a.253.253,0,0,0,.362,0L11.549.429A.253.253,0,0,0,11.6.154Z'/%3E%3C/g%3E%3C/svg%3E";
-                if (index > 0) {
+                if (index !== this._currentTab) {
                     arrow.classList.add('hidden');
                 }
                 return arrow;
