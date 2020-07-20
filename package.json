@@ -14,7 +14,7 @@
     "url": "git+https://github.com/eternagame/eterna-chat-wrapper.git"
   },
   "author": "",
-  "license": "ISC",  
+  "license": "ISC",
   "homepage": "https://github.com/eternagame/eterna-chat-wrapper#readme",
   "devDependencies": {
     "css-loader": "^3.5.3",
