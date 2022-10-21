@@ -172,11 +172,11 @@ export class Chat {
     }
 
     public show() {
-        this._props.container.classList.remove('hidden');
+        this._props.container.classList.remove('invisible');
     }
 
     public hide() {
-        this._props.container.classList.add('hidden');
+        this._props.container.classList.add('invisible');
     }
 
     public postMessage(message: any, targetOrigin: string) {

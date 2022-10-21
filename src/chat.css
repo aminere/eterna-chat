@@ -18,6 +18,10 @@
     display: none;
 }
 
+.invisible {
+    visibility: hidden;
+}
+
 .chat-selectors {
     padding-top: 15px;
     display: flex;
