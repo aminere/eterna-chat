@@ -122,7 +122,7 @@ export class Chat {
         if (props.backgroundColor) {
             props.container.style.backgroundColor = props.backgroundColor;
         }
-        props.container.classList.remove('hidden');
+        props.container.classList.remove('invisible');
         props.container.appendChild(selectors);
         props.container.appendChild(contents);
 
@@ -161,7 +161,7 @@ export class Chat {
                 close.className = "chat-close";
                 close.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.121' height='13.121' viewBox='0 0 13.121 13.121'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%234a90e2;stroke:%234a90e2;stroke-width:1.5px;%7D%3C/style%3E%3C/defs%3E%3Cpath class='a' d='M0,10.045.955,11,5.5,6.455,10.045,11,11,10.045,6.455,5.5,11,.955,10.045,0,5.5,4.545.955,0,0,.955,4.545,5.5Z' transform='translate(1.061 1.061)'/%3E%3C/svg%3E";
                 close.onclick = () => {
-                    props.container.classList.add('hidden');
+                    props.container.classList.add('invisible');
                     if (props.onHidden) {
                         props.onHidden();
                     }
