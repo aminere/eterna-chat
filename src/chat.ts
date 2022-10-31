@@ -123,6 +123,7 @@ export class Chat {
             props.container.style.backgroundColor = props.backgroundColor;
         }
         props.container.classList.remove('invisible');
+        props.container.classList.remove('hidden');
         props.container.appendChild(selectors);
         props.container.appendChild(contents);
 
