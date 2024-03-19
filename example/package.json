@@ -6,8 +6,6 @@
     "build": "webpack",
     "watch": "webpack --watch"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "eterna-chat-wrapper": "github:eternagame/eterna-chat-wrapper"
   },
